@@ -1,0 +1,35 @@
+---
+layout: default
+title: Homepage of Tom O'Donnell
+---
+
+<div class="container">
+
+  <div class="hero-unit">
+    <h1>Tom O'Donnell</h1>
+    <p class="lead">Welcome to my homepage! Check out the links below or...</p>
+    <p><a href="/aboutme.html" class="btn btn-primary btn-large">Learn About Me</a></p>
+  </div>
+  
+  <div class="row">
+  
+    <div class="span6">
+      <div class="well">
+        <h2>Blog</h2>
+        <ul class="posts">
+          {% for post in site.posts %}
+            <li>{{ post.date | date_to_string }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="span6">
+      <div class="well">
+        <h2>Projects</h2>
+        {% include projects.html %}
+      </div>
+    </div>
+  </div>
+  
+</div>
