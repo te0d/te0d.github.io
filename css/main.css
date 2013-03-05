@@ -5,6 +5,7 @@ body {
 .hero-unit {
   background-image: url('/img/header-bg.jpg');
   background-position: center center;
+  background-color: black;
   color: white;
 }
 
