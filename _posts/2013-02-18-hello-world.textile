@@ -3,6 +3,6 @@ layout: post
 title: Hello World!
 ---
 
-h2. {{ page.title }}
+h1. {{ page.title }}
 
 Just a post to test out jekyll. I will make a better introduction post later.

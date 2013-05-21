@@ -35,3 +35,4 @@ Bootstrap.js
 [Bootstrap](http://twitter.github.com/bootstrap/)([GitHub repository](https://github.com/twitter/bootstrap)) is a framework made by Twitter used to make designing web pages easier. More specifically, Bootstrap is good at making web pages with a modern design and display well across a [variety of devices](http://twitter.github.com/bootstrap/scaffolding.html#responsive). The modern feel is acheived with Bootstrap's [CSS for fundamental HTML elements](http://twitter.github.com/bootstrap/base-css.html). Another useful feature is the [grid layout](http://twitter.github.com/bootstrap/scaffolding.html#gridSystem) it provides which only requires setting the appropriate `<div>` class attributes to position the `<div>`.
 
 My webpage does not venture far from [the examples](http://twitter.github.com/bootstrap/getting-started.html#examples) yet, but it is recommended to customize the design with your own CSS.
+

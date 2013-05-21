@@ -12,23 +12,25 @@ title: Homepage of Tom O'Donnell
   </div>
   
   <div class="row">
-  
     <div class="span6">
-      <div class="well">
-        <h2>Blog</h2>
+    
+      <section id="blog" class="well">
+        <h1>Blog</h1>
         <ul class="posts">
           {% for post in site.posts %}
             <li>{{ post.date | date_to_string }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
           {% endfor %}
         </ul>
-      </div>
-    </div>
+      </section>
     
+    </div>
     <div class="span6">
-      <div class="well">
-        <h2>Projects</h2>
+    
+      <section id="projects" class="well">
+        <h1>Projects</h1>
         {% include projects.html %}
-      </div>
+      </section>
+      
     </div>
   </div>
   
