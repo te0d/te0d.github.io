@@ -1,10 +1,14 @@
 ---
 layout: post
-title: Making My Homepage with Jekyll and Bootstrap.js
+published: true
+title: Making My Homepage with Jekyll and Bootstrap
+categories:
+  - Blog
+  - Homepage
+tags:
+  - Jekyll
+  - Bootstrap
 ---
-
-{{ page.title }}
-================
 
 Hello and welcome to my homepage! As the first real post, I figure that it would be appropriate to go over how this webpage was made (not that it is finished being made). The source is available through GitHub at <https://github.com/te0d/te0d.github.com>.
 
@@ -29,8 +33,8 @@ Since Jekyll generates a static site, there is no need for server-side scripting
 
 The directories and files which begin with an underscore are special folders used by Jekyll to generate the static pages. Files in the root directory can use [YAML Front Matter](https://github.com/mojombo/jekyll/wiki/yaml-front-matter) to use layouts in `_layouts` and include segments of HTML from `_includes`. YAML Front Matter provides a way to use "variables" (a way to pass metadata between pages) in the generation of static pages. The `_posts` directory is used to contain blog posts. The post file names need to include the date as shown in the layout so they can be organized by date in the generated directory.
 
-Bootstrap.js
-------------
+Bootstrap
+---------
 
 [Bootstrap](http://twitter.github.com/bootstrap/)([GitHub repository](https://github.com/twitter/bootstrap)) is a framework made by Twitter used to make designing web pages easier. More specifically, Bootstrap is good at making web pages with a modern design and display well across a [variety of devices](http://twitter.github.com/bootstrap/scaffolding.html#responsive). The modern feel is acheived with Bootstrap's [CSS for fundamental HTML elements](http://twitter.github.com/bootstrap/base-css.html). Another useful feature is the [grid layout](http://twitter.github.com/bootstrap/scaffolding.html#gridSystem) it provides which only requires setting the appropriate `<div>` class attributes to position the `<div>`.
 

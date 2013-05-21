@@ -1,6 +1,10 @@
 ---
 layout: post
+published: true
 title: Hello World!
+categories:
+  - Blog
+  - Meta
 ---
 
 h1. {{ page.title }}
