@@ -17,7 +17,7 @@ title: Homepage
       <section id="blog" class="well">
         <h1>Blog</h1>
         {% for post in site.posts %}
-	{% if post.categories contains "Blog" %}
+	{% if post.category == "Blog" %}
           <p><strong>{{ post.date | date_to_string }}</strong></p>
           <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 	{% endif %}
@@ -31,7 +31,7 @@ title: Homepage
         <h1>Projects</h1>
         <ul class="posts">
           {% for post in site.posts %}
-	  {% if post.categories contains "Project" %}
+	  {% if post.category == "Project" %}
             <h4><a href="{{ post.url }}">{{ post.name }}</a></h4>
             <p>{{ post.description }}</p>
 	  {% endif %}

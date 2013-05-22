@@ -2,11 +2,9 @@
 layout: post
 published: true
 title: Hello World!
-categories:
-  - Blog
+category: Blog
+tags:
   - Meta
 ---
-
-h1. {{ page.title }}
 
 Just a post to test out jekyll. I will make a better introduction post later.

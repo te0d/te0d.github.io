@@ -2,10 +2,9 @@
 layout: post
 published: false
 title: Early Development of HipsterMe
-categories:
-  - Blog
-  - HipsterMe
+category: Blog
 tags:
+  - HipsterMe
   - Rails
   - Heroku
   - AWS

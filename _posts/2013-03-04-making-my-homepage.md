@@ -2,10 +2,9 @@
 layout: post
 published: true
 title: Making My Homepage with Jekyll and Bootstrap
-categories:
-  - Blog
-  - Homepage
+category: Blog
 tags:
+  - Homepage
   - Jekyll
   - Bootstrap
 ---

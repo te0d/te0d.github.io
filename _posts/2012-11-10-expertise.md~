@@ -7,6 +7,6 @@ imageurl: /img/expertise-screenshot.png
 homepage: http://expertise.necessaryconclusions.com
 github: https://github.com/te0d/expertise
 category: Project
-tags:
-  - Rails
+ tags:
+   -Rails
 ---
