@@ -3,43 +3,39 @@ layout: default
 title: Homepage
 ---
 
-<div class="container">
+<div class="hero-unit">
+  <h1>Tom O'Donnell</h1>
+  <p class="lead">Welcome to my homepage! Check out the links below or...</p>
+  <p><a href="/aboutme.html" class="btn btn-primary btn-large">Learn About Me</a></p>
+</div>
 
-  <div class="hero-unit">
-    <h1>Tom O'Donnell</h1>
-    <p class="lead">Welcome to my homepage! Check out the links below or...</p>
-    <p><a href="/aboutme.html" class="btn btn-primary btn-large">Learn About Me</a></p>
-  </div>
+<div class="row">
+  <div class="span6">
   
-  <div class="row">
-    <div class="span6">
-    
-      <section id="blog" class="well">
-        <h1>Blog</h1>
+    <section id="blog" class="well">
+      <h1>Blog</h1>
+      {% for post in site.posts %}
+      {% if post.category == "Blog" %}
+        <p><strong>{{ post.date | date_to_string }}</strong></p>
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    	{% endif %}
+      {% endfor %}
+    </section>
+  
+  </div>
+  <div class="span6">
+  
+    <section id="projects" class="well">
+      <h1>Projects</h1>
+      <ul class="posts">
         {% for post in site.posts %}
-	{% if post.category == "Blog" %}
-          <p><strong>{{ post.date | date_to_string }}</strong></p>
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-	{% endif %}
+        {% if post.category == "Project" %}
+          <h4><a href="{{ post.url }}">{{ post.name }}</a></h4>
+          <p>{{ post.description }}</p>
+        {% endif %}
         {% endfor %}
-      </section>
+      </ul>
+    </section>
     
-    </div>
-    <div class="span6">
-    
-      <section id="projects" class="well">
-        <h1>Projects</h1>
-        <ul class="posts">
-          {% for post in site.posts %}
-	  {% if post.category == "Project" %}
-            <h4><a href="{{ post.url }}">{{ post.name }}</a></h4>
-            <p>{{ post.description }}</p>
-	  {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
-      
-    </div>
   </div>
-  
 </div>
