@@ -2,6 +2,7 @@
 ###################
 _site
 build
+.jekyll-cache
 
 # Vim
 *~
