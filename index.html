@@ -1,38 +1,57 @@
 ---
 layout: default
+fluid: true
 title: Homepage
 nav: home
 ---
 
-<h1>Tom O'Donnell <small>[teod]</small></h1>
-<p class="lead">Welcome to my spot on the internet! A little dusty at the moment, but poke around :)</p>
-
 <div class="row">
-  <div class="col-md-6">
-  
-    <section id="projects" >
-      <h1>Projects</h1>
-      {% for post in site.posts %}
-      {% if post.category == "Project" %}
-        <h4><a href="{{ post.url }}">{{ post.name }}</a></h4>
-        <p>{{ post.description }}</p>
-      {% endif %}
-      {% endfor %}
-      </ul>
-    </section>
-    
-  </div>
-  <div class="col-md-6">
-  
-    <section id="blog" >
-      <h1>The Feed</h1>
-      {% for post in site.posts %}
-      {% if post.category == "Blog" %}
-        <p><strong>{{ post.date | date_to_string }}</strong></p>
-        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-    	{% endif %}
-      {% endfor %}
-    </section>
-  
-  </div>
+    <div class="col-lg-3 order-lg-2">
+        <section id="blog" >
+            <h4 class="text-center">Writing</h4>
+            {% for post in site.posts %}
+            {% if post.category == "Blog" %}
+            <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+            {% endif %}
+            {% endfor %}
+        </section>
+    </div>
+    <div class="col-lg-9 order-lg-1">
+        <section id="projects" >
+            <h4 class="text-center">Projects</h4>
+            {% for post in site.posts %}
+            {% if post.category == "Project" %}
+            <div class="row bg-light rounded m-2 p-2">
+                <div class="col-lg-8">
+                    <h4>{{ post.name }}</h4>
+                    <p>
+                    {{ post.description }}
+                    <a href="{{ post.url }}">More Info...</a>
+                    </p>
+
+                    <dl class="well">
+                        <dt>Homepage</dt>
+                        {% if post.homepage %}
+                        <dd><a href="{{ post.homepage }}">{{ post.homepage }}</a></dd>
+                        {% else %}
+                        <dd>none</dd>
+                        {% endif %}
+
+                        <dt>GitHub Repository</dt>
+                        {% if post.github %}
+                        <dd><a href="{{ post.github }}">{{ post.github }}</a></dd>
+                        {% else %}
+                        <dd>none</dd>
+                        {% endif %}
+                </div>
+                <div class="col-lg-4">
+                    {% if post.imageurl %}
+                    <img src="{{ post.imageurl }}" class="img-fluid" />
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </section>
+    </div>
 </div>

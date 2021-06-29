@@ -1,40 +1,31 @@
 ---
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }} [teod]</title>
-  <link rel="shortcut icon" href="/img/favicon.png">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Homepage of Tom O'Donnell">
-  <meta name="author" content="Tom O'Donnell">
-  
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        <h3 title="That's right, you can't click it.">[teod]<h3>
-        <ul  class="nav nav-pills nav-stacked">
-          <li role="presentation" {% if page.nav == "home" %}class="active"{% endif %}><a href="/">Home</a></li>
-          <li role="presentation" {% if page.nav == "projects" %}class="active"{% endif %}><a href="/projects.html">Projects</a></li>
-          <li role="presentation" {% if page.nav == "blog" %}class="active"{% endif %}><a href="/blog.html">The Feed</a></li>
-          <li role="presentation"><a href="http://github.com/te0d">GitHub</a></li>
-        </ul>
-      </div>
-      
-      <div class="col-md-10">
-        {{ content }}
-      </div>
-    </div>
-  </div>
-  
-  <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+        <title>{{ page.title }} [Tom O'Donnell]</title>
+    </head>
+    <body>
+        {% if page.fluid %}
+        <div class="container-fluid">
+        {% else %}
+        <div class="container">
+        {% endif%}
+            <header class="p-3 m-3 border-bottom text-center">
+                <h1>Tom O'Donnell</h1>
+                <h4>Hey there, welcome! Check out some of my projects or writing...</h4>
+            </header>
+
+            {{ content }}
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
 </html>

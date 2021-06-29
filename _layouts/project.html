@@ -1,12 +1,16 @@
 ---
 layout: default
+fluid: false
 nav: projects
 ---
 
 <article>
-  <div class="page-header">
-    <h1><small><a href="/projects.html">Projects</a> ></small> {{ page.name }}</h1>
-  </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ page.name }}</li>
+        </ol>
+    </nav>
   
   <div class="row">
     <div class="col">
