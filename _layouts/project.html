@@ -11,38 +11,35 @@ nav: projects
             <li class="breadcrumb-item active" aria-current="page">{{ page.name }}</li>
         </ol>
     </nav>
-  
-  <div class="row">
-    <div class="col">
-    
-      <dl class="well">
-        <dt>Homepage</dt>
-        {% if page.homepage %}
-          <dd><a href="{{ page.homepage }}">{{ page.homepage }}</a></dd>
-        {% else %}
-          <dd>none</dd>
-        {% endif %}
-        
-        <dt>GitHub Repository</dt>
-        {% if page.github %}
-          <dd><a href="{{ page.github }}">{{ page.github }}</a></dd>
-        {% else %}
-          <dd>none</dd>
-        {% endif %}
-        
-        <dt>Description</dt>
-        <dd>{{ page.description }}</dd>
-      </dl>
-    
+
+    <div class="row">
+        <div class="col-md-6 order-md-2">
+            <dl class="well">
+                <dt>Homepage</dt>
+                {% if page.homepage %}
+                <dd><a href="{{ page.homepage }}">{{ page.homepage }}</a></dd>
+                {% else %}
+                <dd>none</dd>
+                {% endif %}
+
+                <dt>GitHub Repository</dt>
+                {% if page.github %}
+                <dd><a href="{{ page.github }}">{{ page.github }}</a></dd>
+                {% else %}
+                <dd>none</dd>
+                {% endif %}
+
+                <dt>Description</dt>
+                <dd>{{ page.description }}</dd>
+            </dl>
+        </div>
+
+        <div class="col-md-6 order-md-1">
+            <p>{{ page.content }}</p>
+        </div>
     </div>
-    <div class="col">
-    
-      {% if page.imageurl %}
-          <img src="{{ page.imageurl }}" class="img-responsive" />
-      {% endif %}
-    
-    </div>
-  </div>
-  
-  {{ content }}
+
+    {% if page.imageurl %}
+    <img src="{{ page.imageurl }}" class="m-3 p-3 bg-light rounded img-fluid" />
+    {% endif %}
 </article>
