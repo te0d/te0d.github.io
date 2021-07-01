@@ -1,0 +1,24 @@
+---
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/css/freeform.css">
+        {% if page.style %}
+        <link rel="stylesheet" type="text/css" href="/css/{{ page.style }}">
+        {% endif %}
+
+        <title>{{ page.title }} [Tom O'Donnell]</title>
+    </head>
+    <body>
+        <header>
+            <p><a href="/">&lt; Return to the Homepage of Tom O'Donnell</a></p>
+        </header>
+
+        {{ page.content }}
+    </body>
+</html>

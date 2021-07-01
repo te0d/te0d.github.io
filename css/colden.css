@@ -1,0 +1,102 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.bg-image {
+    height: 100%;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #555;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: whitesmoke;
+    padding: 18px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.poem {
+    margin: 5rem;
+}
+
+.stanza {
+    margin-top: 5rem;
+}
+
+.prose {
+    width: 50%;
+    margin: 0rem 3rem;
+    align-self: center;
+}
+
+.prose p {
+    margin: 0rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .bg-image {
+        background-attachment: scroll;
+    }
+
+    .poem {
+        margin: 1rem;
+    }
+
+    .stanza {
+        margin-top: 5rem;
+    }
+
+    .prose {
+        width: 100%;
+        margin: 0;
+    }
+
+    .prose p {
+        margin: 1rem;
+        padding: 0rem;
+    }
+}
+
+#colden-flowed-img {
+    background-image: url("/img/colden/colden_from_flowed_lands.jpg");
+}
+
+#colden-sw-img {
+    background-image: url("/img/colden/colden_sw_pano.jpg");
+}
+
+#colden-ne-img {
+    background-image: url("/img/colden/colden_ne.jpg");
+}
+
+#layered-sw-img {
+    background-image: url("/img/colden/colden_sw_layered.jpg");
+}
+
+#layered-ne-img {
+    background-image: url("/img/colden/colden_ne_layered.jpg");
+}
+
+#unmap-sw-img {
+    background-image: url("/img/colden/unmap_colden_sw.png");
+}
+
+#unmap-ne-img {
+    background-image: url("/img/colden/unmap_colden_ne.png");
+}

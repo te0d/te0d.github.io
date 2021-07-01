@@ -1,0 +1,14 @@
+header {
+    font-family: serif;
+    font-size: 0.8em;
+    background-color: #f8f9fa;  /* bootstrap's bg-light */
+}
+
+header p {
+    margin: 0;
+    padding: 0.5rem;
+}
+
+header p a {
+    color: #dc3545; /* boostrap's link color, keeps from changing color on visited */
+}
