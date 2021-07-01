@@ -4,5 +4,6 @@ header h1 {
 }
 
 #about {
+    padding-bottom: 2rem;
     font-size: 1.5rem;
 }
